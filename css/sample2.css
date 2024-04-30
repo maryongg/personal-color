@@ -1,0 +1,314 @@
+* {
+  font-family: "Kaisei Opti", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  text-align: center;
+  margin: 50px;
+}
+h1 {
+  color: #5a5a5a;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+header {
+  font-size: 30px;
+  color: #333;
+}
+
+p {
+  text-align: center;
+  font-size: 22px;
+  color: #333;
+}
+
+#countdownContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#countdown {
+  font-size: 48px;
+  color: #333;
+}
+
+#startButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button {
+width: 100%;
+  background-color: #8a8a89; /* Green */
+  border: none;
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  padding: 20px 20px; /* パディングを調整 */
+  font-size: 25px; /* フォントサイズを適切に設定 */
+  min-width: 200px; /* 最小幅を設定 */
+  white-space: normal; /* テキストが長い場合に改行されるように設定 */
+  text-align: center; /* テキストを中央揃えに */
+  overflow: hidden;
+  font-family: inherit;
+  font-weight: 400;
+  font-style: normal; /* はみ出たテキストを隠す */
+}
+
+button:hover {
+  background-color: rgb(232, 127, 144);
+}
+
+.zentai {
+  display: inline-block;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.ichiretsume img,
+.niretsume img,
+.sanretsume img,
+.yonretsume img {
+  height: 40%;
+}
+
+img {
+  height: 200px;
+  justify-content: space-evenly;
+}
+
+.spring img,
+.summer img,
+.autumn img,
+.winter img {
+  height: 250px;
+}
+
+.ichiretsume,
+.niretsume,
+.sanretsume,
+.yonretsume {
+  display: flex;
+}
+
+.ichiretsume p,
+.sanretsume p {
+  width: 1200px;
+  text-align: left;
+  display: inline-block;
+  color: #333;
+}
+
+.niretsume p,
+.yonretsume p {
+  width: 1200px;
+  text-align: left;
+  display: inline-block;
+  color: #333;
+}
+
+span {
+  font-size: 35px;
+  font-weight: bold;
+  color: #333;
+}
+
+button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.question button {
+  width: 48%; /* ボタンの幅を48%に設定して、余白を考慮 */
+  margin: 1%; /* 余白を少し追加 */
+  display: inline-block; /* ボタンをインラインブロック要素に */
+}
+
+.spring,
+.summer,
+.autumn,
+.winter {
+  text-align: center;
+  color: #333;
+  padding: 1em 1.5em;
+  margin: 2em 0;
+  background-color: #ffffe0; /*背景色*/
+  border: dotted 6px #ffa500; /*線*/
+}
+
+.spring p,
+.summer p,
+.autumn p,
+.winter p {
+  margin: 0;
+  padding: 0;
+}
+
+.a_kosuu,
+.b_kosuu,
+.c_kosuu,
+.d_kosuu {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+
+.tobu {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.tobu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.q1_section {
+  text-align: center;
+}
+
+.question img {
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+img kao_spring,
+img kao_summer,
+img kao_autumn,
+img kao_winter {
+  width: 1500px;
+  height: 500px;
+}
+
+.large-text {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#result {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* メディアクエリを追加 */
+@media (max-width: 768px) {
+  header {
+    font-size: 24px; /* ヘッダーのフォントサイズを小さく */
+  }
+
+  p {
+    font-size: 18px; /* 段落のフォントサイズを小さく */
+  }
+
+  .ichiretsume img,
+  .niretsume img,
+  .sanretsume img,
+  .yonretsume img,
+  img {
+    height: auto;
+    width: 100%; /* 画像を画面幅に合わせて調整 */
+  }
+
+  .ichiretsume p,
+  .niretsume p,
+  .sanretsume p,
+  .yonretsume p {
+    width: 100%; /* テキストブロックの幅を調整 */
+  }
+
+  button {
+    width: 100%; /* ボタンの幅を画面幅に合わせる */
+    padding: 8px 16px; /* パディングを調整 */
+    font-size: 14px; /* フォントサイズを小さく */
+  }
+
+  .spring,
+  .summer,
+  .autumn,
+  .winter {
+    padding: 0.5em 1em; /* パディングを調整 */
+  }
+
+  /* スマートフォン用のスタイル */
+  img {
+      width: 100%; /* 画像の幅を画面幅に合わせる */
+      height: auto; /* 高さを自動調整 */
+  }
+
+  .question h2 {
+      font-size: 1.2em; /* 質問の見出しのフォントサイズを小さくする */
+  }
+
+  .question button {
+      font-size: 0.8em; /* ボタンのテキストサイズを小さくする */
+      padding: 10px 5px; /* ボタンのパディングを調整 */
+  }
+}
+
+/* さらに小さいデバイス用のスタイル */
+@media (max-width: 480px) {
+  header {
+    font-size: 20px; /* さらに小さく */
+  }
+
+  p {
+    font-size: 16px; /* さらに小さく */
+  }
+}
+
+footer {
+  background-color: #f4f4f4; /* フッターの背景色を設定 */
+  color: #333; /* フッターの文字色を設定 */
+  text-align: center; /* テキストを中央揃えに */
+  padding: 20px 0; /* 上下のパディングを設定 */
+  font-size: 14px; /* フォントサイズを設定 */
+  border-top: 1px solid #ddd; /* 上部に境界線を設定 */
+}
+
+#progressBarContainer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+progress {
+  width: 500px;
+  height: 40px;
+  background-color: #f3f3f3; /* 軽いグレーの背景 */
+  border-radius: 20px; /* 角を丸くする */
+  overflow: hidden; /* 角丸のために必要 */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* 影を追加 */
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent; /* 内部のバーの背景を透明に */
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(to right, #4caf50, #81c784); /* グラデーションを追加 */
+  border-radius: 20px; /* 角を丸くする */
+}
+
+progress::-moz-progress-bar {
+  background: linear-gradient(to right, #4caf50, #81c784); /* グラデーションを追加 */
+  border-radius: 20px; /* 角を丸くする */
+}
+

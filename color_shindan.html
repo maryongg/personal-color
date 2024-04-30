@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample2.css" />
+    <title>パーソナルカラー診断</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>パーソナルカラー診断</h1>
+    </header>
+
+    <div class="zentai">
+      <div id="questions">
+        <div class="question" id="question1">
+          <h2>Q1.周りからよく言われる第一印象は？</h2>
+          <img src="./img/pose_peace_sign_woman.png" alt="" />
+          <button onclick="selectOption('A')">
+            A. 明るい、キュート、かわいい、年齢より若く見える
+          </button>
+          <button onclick="selectOption('B')">
+            B. 落ち着いている、大人っぽい、ゴージャス、ナチュラル
+          </button>
+          <button onclick="selectOption('C')">
+            C. ソフト、優しい、エレガント、爽やか
+          </button>
+          <button onclick="selectOption('D')">
+            D. シャープ、クール、華やか、印象的
+          </button>
+        </div>
+
+        <div class="question" id="question2" style="display: none">
+          <h2>Q2.肌の色は？</h2>
+          <img src="./img/ganguro_gal.png" alt="" />
+          <button onclick="selectOption('A')">
+            A. 肌の色は明るいオークル系で、皮膚が薄め
+          </button>
+          <button onclick="selectOption('B')">
+            B. 肌の色はオークル系でマットな肌
+          </button>
+
+          <button onclick="selectOption('C')">
+            C. 明るいピンク系の肌で肌の質感はややマット
+          </button>
+          <button onclick="selectOption('D')">
+            D. ピンク系の白色肌、ダーク肌。<br />あるいは黄みがかなり強いオークル系の肌、肌に艶がある
+          </button>
+        </div>
+        <div class="question" id="question3" style="display: none">
+          <h2>Q3.日焼けするとどうなる？</h2>
+          <img src="./img/hiyake_girl.png" alt="" srcset="" />
+          <button onclick="selectOption('A')">
+            A.日焼けしやすいが戻るのも早い
+          </button>
+          <button onclick="selectOption('B')">
+            B. 日焼けしやすく、肌色も元に戻りにくい
+          </button>
+          <button onclick="selectOption('C')">
+            C. 肌が赤くなるだけで肌色が変わりにくい
+          </button>
+          <button onclick="selectOption('D')">
+            D. やや赤くなり、その後日焼けする</button
+          ><!-- Q3の内容 -->
+        </div>
+        <div class="question" id="question4" style="display: none">
+          <h2>Q4.目の印象は？</h2>
+          <img src="./img/eye_color.jpeg" alt="" />
+          <button onclick="selectOption('A')">
+            A. 瞳は明るいブラウンかソフトなブラック。<br />ガラス玉の様にキラキラしている。
+          </button>
+          <button onclick="selectOption('B')">
+            B. 瞳はダークブラウンかブラック。落ち着いた印象がある
+          </button>
+          <button onclick="selectOption('C')">
+            C. 瞳は赤みのあるブラウンかソフトなブラック。優しい印象がある
+          </button>
+          <button onclick="selectOption('D')">
+            D. 瞳はブラックか赤みのあるダークブラウン。<br />白目と黒目のコントラストがはっきりしている</button
+          ><!-- Q3の内容 -->
+        </div>
+        <div class="question" id="question5" style="display: none">
+          <h2>Q5.自分の肌に馴染むと思うアクセサリーは？</h2>
+          <img src="./img/yubiwa_ruby.png" alt="" />
+          <button onclick="selectOption('A')">
+            A. キラキラした明るいゴールド
+          </button>
+          <button onclick="selectOption('B')">
+            B. 黄みの強いゴールド、つや消しのゴールド、ブロンズ
+          </button>
+          <button onclick="selectOption('C')">
+            C. 優しい光沢のプラチナ、シルバー
+          </button>
+          <button onclick="selectOption('D')">
+            D. 艶のあるプラチナ、シルバー</button
+          ><!-- Q3の内容 -->
+        </div>
+        <div class="question" id="question6" style="display: none">
+          <h2>Q6.自分の肌に馴染むと思う口紅の色は？</h2>
+          <img src="./img/kuchibeni_woman.png" alt="" />
+          <button onclick="selectOption('A')">
+            A. ピーチピンクなど明るいオレンジ系の口紅
+          </button>
+          <button onclick="selectOption('B')">
+            B. オレンジベージュなど落ち着いたオレンジ系の口紅
+          </button>
+          <button onclick="selectOption('C')">
+            C. ローズピンクなど明るいローズ系の口紅
+          </button>
+          <button onclick="selectOption('D')">
+            D. フューシャピンクなど鮮やかなローズ系の口紅
+          </button>
+        </div>
+        <div class="question" id="question7" style="display: none">
+          <h2>Q7.自分の肌に合わないと思う口紅の色は？</h2>
+          <img src="./img/mark_taboo.png" alt="" />
+          <button onclick="selectOption('A')">A. ワインレッド</button>
+          <button onclick="selectOption('B')">B. ローズピンク</button>
+          <button onclick="selectOption('C')">C. オレンジ</button>
+          <button onclick="selectOption('D')">D. オレンジベージュ</button
+          ><!-- Q3の内容 -->
+        </div>
+        <div class="question" id="question8" style="display: none">
+          <h2>Q8. ベージュとグレーはどちらが似合う？</h2>
+          <img src="./img/job_stylist.png" alt="" />
+          <button onclick="selectOption('A')">
+            A. 明るいベージュを着ると顔色がよく見える
+          </button>
+          <button onclick="selectOption('B')">
+            B. 落ち着いたベージュやブラウンが地味にならない
+          </button>
+          <button onclick="selectOption('C')">
+            C. ライトグレーやブルーグレーを着ると肌が綺麗に見える
+          </button>
+          <button onclick="selectOption('D')">
+            D. 暗めのグレーで顔の印象がはっきりする</button
+          ><!-- Q3の内容 -->
+        </div>
+        <div id="progressBarContainer">
+          <progress id="progressBar" value="0" max="8"></progress>
+          <span id="progressText">0 / 8</span>
+        </div>
+      </div>
+
+      <!-- <button onclick="nextQuestion()">次へ</button> -->
+      <div id="result" style="display: none">
+        <h2>診断結果</h2>
+        <div class="result-image" id="resultA" style="display: none">
+          <img src="./img/kao_spring.png" alt="パーソナルカラー：スプリング" />
+          <br />
+          <img
+            src="./img/color_spring.png"
+            alt="パーソナルカラー：スプリング"
+          />
+        </div>
+        <div class="result-image" id="resultB" style="display: none">
+          <img src="./img/kao_summer.png" alt="パーソナルカラー：サマー" />
+          <br />
+          <img src="./img/color_summer.png" alt="パーソナルカラー：サマー" />
+        </div>
+        <div class="result-image" id="resultC" style="display: none">
+          <img src="./img/kao_autumn.png" alt="パーソナルカラー：オータム" />
+          <br />
+          <img src="./img/color_autumn.png" alt="パーソナルカラー：オータム" />
+        </div>
+        <div class="result-image" id="resultD" style="display: none">
+          <img src="./img/kao_winter.png" alt="パーソナルカラー：ウィンター" />
+          <br />
+          <img
+            src="./img/color_winter.png"
+            alt="パーソナルカラー：ウィンター"
+          />
+        </div>
+
+        <p id="resultText" class="large-text"></p>
+        <p id="resultDescription"></p>
+      </div>
+      <script>
+        let currentQuestion = 1;
+        let scores = { A: 0, B: 0, C: 0, D: 0 };
+
+        function nextQuestion() {
+          if (currentQuestion < 8) {
+            document.getElementById(
+              "question" + currentQuestion
+            ).style.display = "none";
+            currentQuestion++;
+            document.getElementById(
+              "question" + currentQuestion
+            ).style.display = "block";
+            updateProgressBar();
+          } else {
+            showResults();
+          }
+        }
+
+        function selectOption(option) {
+          scores[option]++;
+          nextQuestion();
+        }
+
+        function updateProgressBar() {
+          const progressBar = document.getElementById("progressBar");
+          const progressText = document.getElementById("progressText");
+          progressBar.value = currentQuestion;
+          progressText.textContent = currentQuestion + " / 8";
+        }
+
+        function showResults() {
+          document.getElementById("questions").style.display = "none";
+          document.getElementById("result").style.display = "block";
+          const maxScore = Math.max(scores.A, scores.B, scores.C, scores.D);
+          let result;
+          let resultImageId;
+          let description;
+          if (maxScore === scores.A) {
+            result = "イエベ春";
+            resultImageId = "resultA";
+            description =
+              "イエベタイプの中でも、淡く黄みがかった肌や明るいブラウン系の瞳・髪を持ち、軽やかな雰囲気を漂わせているのがイエベ春タイプ。\n肌や髪、瞳など、ツヤや光を感じさせることも特徴。\nイエベ春の人は色素が薄く透明感があり、まさに春のイメージのようにふわっと明るく可愛らしい印象を与えます。\nまた、年齢よりも若く見られることが多いでしょう。";
+          } else if (maxScore === scores.B) {
+            result = "ブルベ夏";
+            resultImageId = "resultB";
+            description =
+              "ベースカラーはブルーで、柔らかく清涼感がある雰囲気。\n紫陽花や月見草のようなイメージです。\n上品・清楚イメージのカラーやくすみ系のニュアンスカラーが似合います。\n肌に黄色みが少なく、ソフトで優しい印象、上品でしっとりとした雰囲気があります。\n瞳はソフトな黒で、白目と黒目のコントラストも柔らかです。";
+          } else if (maxScore === scores.C) {
+            result = "イエベ秋";
+            resultImageId = "resultC";
+            description =
+              "黄みよりで、低彩度で落ち着いたカラーや穏やかなカラーが似合います。\n秋の深い紅葉のように落ち着いていて、それでいて都会的な雰囲気も併せ持っています。\nお肌は黄みを感じるマットな質感、瞳や髪の毛はダークブラウン～ブラック、\n唇はややくすんだ血色感があるのが大人っぽい印象です。";
+          } else {
+            result = "ブルベ冬";
+            resultImageId = "resultD";
+            description =
+              "鮮やかな純色、シャーベットのような淡い色が似合います。\n強く輝くシャープな瞳に、顔立ちははっきりして濃い印象。\nクールでシャープ、華やかな存在感があります。\nブルべ冬の人は肌が白く、赤みが少ないので、黒髪やブラックコーディネートが似合います。\n瞳は黒目と白目のコントラストがはっきりしており、目力が強く眼差しが印象的です。";
+          }
+          document.getElementById(resultImageId).style.display = "block";
+          document.getElementById("resultText").innerText =
+            "あなたのパーソナルカラーは " + "「" + result + "」" + " です。";
+          document.getElementById("resultDescription").innerText = description;
+        }
+      </script>
+    </div>
+    <footer>
+      <p>&copy; 2023 maryongg. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
